@@ -1,10 +1,12 @@
 package senounta.nikos.models;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
 import java.util.List;
 
+@JsonPropertyOrder({ "id", "user","pizzaOrder" })
 public class Order {
 
     @Positive

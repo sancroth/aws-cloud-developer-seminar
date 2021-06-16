@@ -1,7 +1,9 @@
 package senounta.nikos.models;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import jakarta.validation.constraints.NotNull;
 
+@JsonPropertyOrder({ "pizza", "quantity" })
 public class PizzaOrder {
 
     @NotNull

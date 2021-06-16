@@ -1,5 +1,6 @@
 package senounta.nikos.models;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import jakarta.validation.constraints.*;
 
@@ -7,6 +8,7 @@ import jakarta.validation.constraints.*;
 import java.util.List;
 
 @JsonRootName(value = "user")
+@JsonPropertyOrder({ "id", "name", "surname", "address", "phoneNum" })
 public class User {
 
     @Positive

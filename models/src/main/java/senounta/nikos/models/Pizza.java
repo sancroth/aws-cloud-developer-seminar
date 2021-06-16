@@ -1,11 +1,13 @@
 package senounta.nikos.models;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 
 @JsonRootName(value = "pizza")
+@JsonPropertyOrder({ "id", "type","doughType" })
 public class Pizza {
 
     @Positive
